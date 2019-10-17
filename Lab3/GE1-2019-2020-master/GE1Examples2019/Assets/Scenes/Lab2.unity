@@ -444,6 +444,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1673677143568842261, guid: 65ee1ea780530f54d9da9e4fbcb9d22f,
     type: 3}
   bulletSpawn: {fileID: 113817315}
+  fireRate: 3
 --- !u!114 &552314924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,7 +811,7 @@ GameObject:
   - component: {fileID: 1310583480}
   - component: {fileID: 1310583481}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -922,6 +923,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1673677143568842261, guid: 65ee1ea780530f54d9da9e4fbcb9d22f,
     type: 3}
   bulletSpawn: {fileID: 1081215067}
+  fireRate: 3
 --- !u!1 &1410947404
 GameObject:
   m_ObjectHideFlags: 0
