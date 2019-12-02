@@ -18,10 +18,10 @@
   I may not be able to come up with the flowers settings part, but it's still interesting, I really like the art style and the visual of it. 
 It could be coupled to a form generation thing, and have a floral forms of animals/people.
 
-######Portrait Generation
+###### Portrait Generation
 https://www.youtube.com/watch?v=zT7We17o4zU&list=PLYvvXacaeRwQ5Z5pxHkT2i5rzWo-Vr_hu&index=19
   The code has been made in Processing, but it shows how dynamic it would be if coupled with the fractal flowers generation one.
   
-######Generative (Bonus)
+###### Generative (Bonus)
 https://www.youtube.com/watch?v=Y1bPsh1mFUI&list=PLYvvXacaeRwQ5Z5pxHkT2i5rzWo-Vr_hu&index=2
 Overall, I am aiming for a generative art thing.
