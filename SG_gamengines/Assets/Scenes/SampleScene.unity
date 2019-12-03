@@ -120,6 +120,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &572068838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 770989359899718613, guid: 538347222dfe3d243920d06eea8919d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 8760336538017646321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &572068843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572068838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0f88eaa5fb1d747860d514d1d7c045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpin: 0
+  ySpin: 0
+  zSpin: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +324,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1155585006}
-  - component: {fileID: 1155585005}
   - component: {fileID: 1155585007}
   m_Layer: 0
   m_Name: Spawn point 1
@@ -312,19 +332,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1155585005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155585004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c7e2121b431ba340a4bcf38111933e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomWhale: {fileID: 0}
 --- !u!4 &1155585006
 Transform:
   m_ObjectHideFlags: 0
@@ -351,8 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7e2121b431ba340a4bcf38111933e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomWhale: {fileID: 3164539207437386591, guid: 538347222dfe3d243920d06eea8919d5,
-    type: 3}
+  Timer: 3
+  Whale: {fileID: 770989359899718613, guid: 538347222dfe3d243920d06eea8919d5, type: 3}
 --- !u!1001 &4333093799970540311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360,15 +367,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5912343497882303156, guid: 07bebb5cb5895f24ea1e048ee1984fa1,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5693623930052156566, guid: 07bebb5cb5895f24ea1e048ee1984fa1,
         type: 3}
       propertyPath: m_Name
       value: whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912343497882303156, guid: 07bebb5cb5895f24ea1e048ee1984fa1,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8743889398568513157, guid: 07bebb5cb5895f24ea1e048ee1984fa1,
         type: 3}
@@ -434,15 +441,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1119806245045701440, guid: 7cd2c877292df044694bb942f2778e49,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1488092259567123967, guid: 7cd2c877292df044694bb942f2778e49,
         type: 3}
       propertyPath: m_Name
       value: humpback_whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119806245045701440, guid: 7cd2c877292df044694bb942f2778e49,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2521344945136553964, guid: 7cd2c877292df044694bb942f2778e49,
         type: 3}
@@ -508,15 +515,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3164539207437386591, guid: 538347222dfe3d243920d06eea8919d5,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 770989359899718613, guid: 538347222dfe3d243920d06eea8919d5,
         type: 3}
       propertyPath: m_Name
       value: blue whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3164539207437386591, guid: 538347222dfe3d243920d06eea8919d5,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388831933748691398, guid: 538347222dfe3d243920d06eea8919d5,
         type: 3}
