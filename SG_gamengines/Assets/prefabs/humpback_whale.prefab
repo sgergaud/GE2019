@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6892367122359940570}
   - component: {fileID: 908058109716695331}
   - component: {fileID: 1119806245045701440}
+  - component: {fileID: 6848818563331091578}
   m_Layer: 0
   m_Name: humpback_whale
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1488092259567123967}
   m_LocalRotation: {x: -0.9999757, y: -0, z: -0, w: 0.0069801835}
   m_LocalPosition: {x: 10.409566, y: 4.1272416, z: -5.0518675}
-  m_LocalScale: {x: 1.5069859, y: 1.5069859, z: 1.5069859}
+  m_LocalScale: {x: 5.026853, y: 5.026853, z: 5.026853}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,3 +96,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6848818563331091578
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488092259567123967}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3804199, y: 0.7233202, z: 1.8671105}
+  m_Center: {x: -0.35158998, y: -0.3670601, z: 0.09733502}
