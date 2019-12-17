@@ -7,7 +7,7 @@ The eye inthe middle is made by creating spheres and changing their radius as th
 
   To run this experience, all you should need to do is either clone the repo or download the zip file and open the project with Unity. You should also need an Xbox One Controller.
 
- ##Development Process
+ ## Development Process
  
  I used Youtube tutorials a lot, as I am not very experienced with unity. I used examples from the lecture to make game objects spin on themselves and materials component. As you may, within the same project I tried a few things such as spawning elements and mesh generation, but I ended up not using them, because I didn't need it to achieve the final visual I wanted.
 
