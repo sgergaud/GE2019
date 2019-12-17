@@ -4,28 +4,39 @@ using UnityEngine;
 
 public class TangentCircles1 : CircleTangent
 {
+    [Header("Setup")]
     public GameObject _circlePrefab;
     private GameObject _innerCircleGO, _outterCircleGO;
-    public Vector4 _innerCircle, _outterCircle;
+    private Vector4 _innerCircle, _outterCircle;
+    public float _innerCircleRadius, _outterCircleRadius;
     private Vector4[] _tangentCircle;
     private GameObject[] _tangentObject;
     [Range(1, 64)]
     public int _circleAmount;
 
-    //Inputs
-    private Vector2 _tsL, _tsLSmooth; //ThumbstickLeft
-    [Range(0,1)]
+    [Header("Input")]
+    [Range(0, 1)]
     public float _distOuterTangent;
     [Range(0, 1)]
     public float _movementSmooth;
+    [Range(0.1f, 10f)]
+    public float _radiusChangeSpeed;
+    private Vector2 _tsL, _tsLSmooth; //ThumbstickLeft
+    public float _radiusChange;
 
+    private float _rotateTangenteObjects;
+    public float _rotateSpeed;
+
+   
     // Start is called before the first frame update
     void Start()
     {
-        _innerCircleGO = (GameObject)Instantiate(_circlePrefab);
-        _outterCircleGO = (GameObject)Instantiate(_circlePrefab);
+        _innerCircle = new Vector4(0, 0, 0, _innerCircleRadius);
+        _outterCircle = new Vector4(0, 0, 0, _outterCircleRadius);
+
         _tangentCircle = new Vector4[_circleAmount];
         _tangentObject = new GameObject[_circleAmount];
+        
 
         //Spawn the object
         for (int i=0; i < _circleAmount; i++)
@@ -33,6 +44,9 @@ public class TangentCircles1 : CircleTangent
             GameObject tangentInstance = (GameObject)Instantiate(_circlePrefab);
             _tangentObject[i] = tangentInstance;
             _tangentObject[i].transform.parent = this.transform;
+           
+
+
         }
     }
 
@@ -43,28 +57,30 @@ public class TangentCircles1 : CircleTangent
             _tsLSmooth.x * (1 - _movementSmooth) + _tsL.x * _movementSmooth,
             _tsLSmooth.y * (1 - _movementSmooth) + _tsL.y * _movementSmooth );
 
+        _radiusChange = Input.GetAxis("TriggerL") - Input.GetAxis("TriggerR");
 
         _innerCircle = new Vector4 (
             (_tsLSmooth.x * (_outterCircle.w - _innerCircle.w) * (1 - _distOuterTangent)) + _outterCircle.x,
              0.0f,
             (_tsLSmooth.y * (_outterCircle.w - _innerCircle.w) * (1 - _distOuterTangent)) + _outterCircle.z,
-            _innerCircle.w);
+            _innerCircle.w + (_radiusChange * Time.deltaTime * _radiusChangeSpeed));
+
 
     }
     // Update is called once per frame
     void Update()
     {
-        _innerCircleGO.transform.position = new Vector3(_innerCircle.x, _innerCircle.y, _innerCircle.z);
-        _innerCircleGO.transform.localScale = new Vector3(_innerCircle.w, _innerCircle.w, _innerCircle.w) * 2;
-        _outterCircleGO.transform.position = new Vector3(_outterCircle.x, _outterCircle.y, _outterCircle.z);
-        _outterCircleGO.transform.localScale = new Vector3(_outterCircle.w, _outterCircle.w, _outterCircle.w) * 2;
-       
+        PlayerInput();
+
+
+
+
         for (int i = 0; i < _circleAmount; i++)
         {
             _tangentCircle[i] = FindTangentCircle(_outterCircle, _innerCircle, (360f / _circleAmount) * i);
             _tangentObject[i].transform.position = new Vector3(_tangentCircle[i].x, _tangentCircle[i].y, _tangentCircle[i].z);
-            _tangentObject[i].transform.localScale = new Vector3(_tangentCircle[i].w, _tangentCircle[i].w, _tangentCircle[i].w)*2;
-        }
+            _tangentObject[i].transform.localScale = new Vector3(_tangentCircle[i].w, _tangentCircle[i].w, _tangentCircle[i].w) * 2;
+        }   
       
     }
 

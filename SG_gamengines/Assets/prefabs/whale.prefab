@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 8743889398568513157}
   - component: {fileID: 289232768405460147}
   - component: {fileID: 6286751030545623114}
-  - component: {fileID: 5912343497882303156}
-  - component: {fileID: 5986607760370900402}
+  - component: {fileID: 2866660167404107719}
   m_Layer: 0
   m_Name: whale
   m_TagString: Untagged
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5693623930052156566}
   m_LocalRotation: {x: -0.71257764, y: 0.021098739, z: -0.70094794, w: -0.021448791}
   m_LocalPosition: {x: 15.25, y: 12.97, z: -0.21}
-  m_LocalScale: {x: 0.3235437, y: 0.3235437, z: 0.3235437}
+  m_LocalScale: {x: 0.084334895, y: 0.084334895, z: 0.084334895}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,32 +79,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &5912343497882303156
-Rigidbody:
+--- !u!114 &2866660167404107719
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5693623930052156566}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &5986607760370900402
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5693623930052156566}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 75.867134, y: 25.252176, z: 37.193092}
-  m_Center: {x: 0.3105145, y: 0.13802485, z: 0.0000037647378}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b93cb7ce66bb1a4bb3d32af08a848d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
